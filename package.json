@@ -2,7 +2,7 @@
   "name": "rpn-calculator",
   "version": "0.1.0",
   "private": false,
-  "homepage": "http://vbait.github.io/rpn-calculator",
+  "homepage": "http://ft457.github.io/rpn-react",
   "author": "Vitalii Baitaliuk <vitalii.baitaliuk@gmail.com>",
   "license": "MIT",
   "dependencies": {
