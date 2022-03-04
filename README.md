@@ -35,16 +35,6 @@ RPN leads to faster calculations for a couple of reasons. One is that there is l
 Therefore, instead of needing to store nine characters for the expression ((5 – 3) * 2), computers using RPN only need to store five characters with the expression 5 3 – 2 *. 
 And because there are fewer characters to process, execution becomes faster.
 
-So in a computer using RPN, the evaluation of the expression 5 1 – 3 * is as follows:
-
-1. Push 5 into the stack. This is the first value.
-2. Push 1 into the stack. This is the second value and is on the position above the 5.
-3. Apply the subtraction operation by taking two operands from the stack (1 and 5). 
- The top value (1) is subtracted from the value below it (5), and the result (4) is stored back to the stack. 4 is now the only value in the stack and is in the bottom.
-5. Push 3 into the stack. This value is in the position above 4 in the stack.
-6. Apply the multiplication operation by taking the last two numbers off the stack and multiplying them. 
-The result is then placed back into the stack. After this operation, the stack now only contains the number 12.
-
 ## Solution 
 
 Note:
@@ -62,6 +52,14 @@ Explanation: ((2 + 1) * 3) = 9
 Input: ["4", "13", "5", "/", "+"]
 Output: 6
 Explanation: (4 + (13 / 5)) = 6
+
+So in a computer using RPN, the evaluation of the expression 5 1 – 3 * is as follows:
+
+Push 5 into the stack. This is the first value.
+Push 1 into the stack. This is the second value and is on the position above the 5.
+Apply the subtraction operation by taking two operands from the stack (1 and 5). The top value (1) is subtracted from the value below it (5), and the result (4) is stored back to the stack. 4 is now the only value in the stack and is in the bottom.
+Push 3 into the stack. This value is in the position above 4 in the stack.
+Apply the multiplication operation by taking the last two numbers off the stack and multiplying them. The result is then placed back into the stack. After this operation, the stack now only contains the number 12.
 
 Approach:
 
