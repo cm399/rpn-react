@@ -1,0 +1,55 @@
+$button-width: 60px;
+$button-margin: 3px;
+
+.calculator {
+  display: inline-block;
+  .form-control {
+    margin: $button-margin;
+    width: calc(100% - #{$button-margin} * 2);
+  }
+  button {
+    outline: none;
+    width: $button-width;
+    margin: $button-margin;
+    &.double {
+      width: calc(#{$button-width} * 2 + #{$button-margin} * 2);
+    }
+  }
+  .filter {
+    padding: $button-margin;
+  }
+  .display {
+    position: relative;
+    textarea {
+      height: 50px;
+      min-height: 50px;
+    }
+    .alert {
+      position: absolute;
+      top: 0;
+      left: $button-margin;
+      width: calc(100% - #{$button-margin} * 2);
+    }
+  }
+  .calculator-container {
+    display: flex;
+    .numbers {
+      width: calc(#{$button-width} * 3 + #{$button-margin} * 3 * 2);
+    }
+    .operations {
+      max-height: 180px;
+      display: flex;
+      flex-flow: column wrap;
+    }
+  }
+  .manipulate {
+    display: flex;
+    button {
+      width: 100%;
+      text-transform: uppercase;
+    }
+  }
+  .reset {
+    text-align: right;
+  }
+}
