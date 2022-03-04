@@ -8,7 +8,6 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import { chunkArray } from './utils';
 import RPNCalculator from './RPNCalculator';
@@ -33,11 +32,6 @@ function Calculator({ operators: additionalOperators }) {
   const [numbers, setNumbers] = useState(calculator.numbers());
   const [value, setValue] = useState('');
   const [error, setError] = useState();
-  const [readonly, setReadonly] = useState(false);
-
-  const handleReadonly = useCallback(() => {
-    setReadonly((v) => !v);
-  }, [setReadonly]);
 
   const handleChange = useCallback(
     (v) => {
@@ -109,22 +103,12 @@ function Calculator({ operators: additionalOperators }) {
 
   return (
     <div className="calculator">
-      <div className="filter">
-        <Form.Check
-          type="checkbox"
-          id="id_readonly"
-          label="Readonly"
-          checked={readonly}
-          onChange={handleReadonly}
-        />
-      </div>
       <div className="display">
         <input
           type="text"
           value={value}
           onChange={(e) => handleChange(e.target.value)}
           className="form-control"
-          readOnly={readonly}
           ref={inputRef}
         />
       </div>
