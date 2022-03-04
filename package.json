@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": false,
   "homepage": "http://ft457.github.io/rpn-react",
-  "author": "Vitalii Baitaliuk <vitalii.baitaliuk@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
