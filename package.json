@@ -2,7 +2,7 @@
   "name": "rpn-calculator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ft457.github.io/rpn-react",
+  "homepage": "http://ft457.github.io/rpn-react1",
   "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
