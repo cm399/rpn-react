@@ -1,7 +1,7 @@
 {
   "name": "rpn-calculator",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "homepage": "http://ft457.github.io/rpn-react",
   "license": "MIT",
   "dependencies": {
